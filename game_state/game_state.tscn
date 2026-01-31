@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cdl2alxfgsvuc"]
 
-[ext_resource type="Script" uid="uid://djeuwcpgvarng" path="res://components/state_manager/state_manager.gd" id="1_qwj6x"]
+[ext_resource type="Script" uid="uid://wseirihlvmxl" path="res://game_state/game_state.gd" id="1_05esu"]
 [ext_resource type="Script" uid="uid://ckrvxfae4nlm6" path="res://game_state/init.gd" id="2_05esu"]
 [ext_resource type="Script" uid="uid://tb3grdqeiee5" path="res://game_state/loading_scenario.gd" id="3_trw2i"]
 [ext_resource type="Script" uid="uid://s8vxutquxvn1" path="res://game_state/running_dialogue.gd" id="4_i6q3u"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://drejjcyt53s3i" path="res://game_state/running_reaction.gd" id="6_g2oga"]
 
 [node name="GameState" type="Node" unique_id=803203647 node_paths=PackedStringArray("initial_state")]
-script = ExtResource("1_qwj6x")
+script = ExtResource("1_05esu")
 initial_state = NodePath("Init")
 metadata/_custom_type_script = "uid://djeuwcpgvarng"
 
