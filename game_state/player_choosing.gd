@@ -1,5 +1,7 @@
 extends State
 
+var choices: Variant
+
 
 func on_enter_state() -> void:
 	print("on_enter_state ", name)

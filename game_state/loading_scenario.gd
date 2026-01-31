@@ -38,4 +38,4 @@ func _process(_delta: float):
 	# "done" loading :)
 	if progress_value >= 99.99:
 		manager.scenario = ResourceLoader.load_threaded_get(path)
-		manager.change_state_to("RunningDialogue")
+		manager.run_dialogue()
