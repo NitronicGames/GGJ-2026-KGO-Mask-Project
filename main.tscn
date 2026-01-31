@@ -1,38 +1,14 @@
 [gd_scene format=3 uid="uid://dpmkc3ojjnjcw"]
 
 [ext_resource type="Script" uid="uid://qha4wqrsedu5" path="res://character_body_2d.gd" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://djeuwcpgvarng" path="res://components/state_manager/state_manager.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cdl2alxfgsvuc" path="res://game_state/game_state.tscn" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://b3s02nfj7eovk" path="res://icon.svg" id="2_h2yge"]
-[ext_resource type="Script" uid="uid://mexu1dikjy2v" path="res://components/state_manager/state.gd" id="2_lquwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bvp3"]
 
 [node name="Node2D" type="Node2D" unique_id=13191468]
 
-[node name="GameState" type="Node" parent="." unique_id=738882912 node_paths=PackedStringArray("initial_state")]
-script = ExtResource("1_1bvp3")
-initial_state = NodePath("Init")
-metadata/_custom_type_script = "uid://djeuwcpgvarng"
-
-[node name="Init" type="Node" parent="GameState" unique_id=180251807]
-script = ExtResource("2_lquwl")
-metadata/_custom_type_script = "uid://mexu1dikjy2v"
-
-[node name="LoadingScenario" type="Node" parent="GameState" unique_id=673634530]
-script = ExtResource("2_lquwl")
-metadata/_custom_type_script = "uid://mexu1dikjy2v"
-
-[node name="RunningDialogue" type="Node" parent="GameState" unique_id=245352436]
-script = ExtResource("2_lquwl")
-metadata/_custom_type_script = "uid://mexu1dikjy2v"
-
-[node name="PlayerChoosing" type="Node" parent="GameState" unique_id=118747627]
-script = ExtResource("2_lquwl")
-metadata/_custom_type_script = "uid://mexu1dikjy2v"
-
-[node name="RunningReaction" type="Node" parent="GameState" unique_id=728591310]
-script = ExtResource("2_lquwl")
-metadata/_custom_type_script = "uid://mexu1dikjy2v"
+[node name="GameState" parent="." unique_id=803203647 instance=ExtResource("1_h2yge")]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2110008973]
 script = ExtResource("1_0xm2m")
