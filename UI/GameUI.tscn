@@ -40,4 +40,73 @@ scroll_active = false
 layout_mode = 2
 text = "Continue"
 
+[node name="ChoicePanel" type="PanelContainer" parent="." unique_id=724073974]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -190.05249
+offset_top = -111.0
+offset_right = 190.05249
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ChoiceHBox" type="HBoxContainer" parent="ChoicePanel" unique_id=1921870293]
+layout_mode = 2
+
+[node name="CasualButton" type="Button" parent="ChoicePanel/ChoiceHBox" unique_id=1708674713]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Casual Self"
+
+[node name="PoliteButton" type="Button" parent="ChoicePanel/ChoiceHBox" unique_id=1004486038]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Polite Face"
+
+[node name="FormalButton" type="Button" parent="ChoicePanel/ChoiceHBox" unique_id=1231180761]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Formal Mask
+"
+
+[node name="FeedbackPanel" type="PanelContainer" parent="." unique_id=1260338712]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -79.0
+offset_right = 264.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FeedbackPanel" unique_id=724775686]
+layout_mode = 2
+
+[node name="FeedbackVBox" type="VBoxContainer" parent="FeedbackPanel/MarginContainer" unique_id=1932467271]
+layout_mode = 2
+
+[node name="ReactionLabel" type="Label" parent="FeedbackPanel/MarginContainer/FeedbackVBox" unique_id=1132110103]
+layout_mode = 2
+text = "NPC reaction here"
+
+[node name="ReflectionLabel" type="RichTextLabel" parent="FeedbackPanel/MarginContainer/FeedbackVBox" unique_id=61756942]
+layout_mode = 2
+text = "Why this happened"
+
+[node name="NextButton" type="Button" parent="FeedbackPanel/MarginContainer/FeedbackVBox" unique_id=1480051956]
+layout_mode = 2
+text = "Next"
+
 [connection signal="pressed" from="DialoguePanel/MarginContainer/DialogueVBox/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="ChoicePanel/ChoiceHBox/CasualButton" to="." method="_on_casual_button_pressed"]
+[connection signal="pressed" from="ChoicePanel/ChoiceHBox/PoliteButton" to="." method="_on_polite_button_pressed"]
+[connection signal="pressed" from="ChoicePanel/ChoiceHBox/FormalButton" to="." method="_on_formal_button_pressed"]
+[connection signal="pressed" from="FeedbackPanel/MarginContainer/FeedbackVBox/NextButton" to="." method="_on_next_button_pressed"]
