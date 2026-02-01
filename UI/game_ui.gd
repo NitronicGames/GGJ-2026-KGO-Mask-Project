@@ -13,3 +13,15 @@ func _process(delta: float) -> void:
 
 func _on_continue_button_pressed() -> void:
 	print("Continue clicked")
+
+
+func _on_casual_button_pressed() -> void:
+	print("Mask: casual")
+
+
+func _on_polite_button_pressed() -> void:
+	print("Mask: polite")
+
+
+func _on_formal_button_pressed() -> void:
+	print("Mask: formal")

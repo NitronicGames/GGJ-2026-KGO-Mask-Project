@@ -40,4 +40,29 @@ scroll_active = false
 layout_mode = 2
 text = "Continue"
 
+[node name="ChoicePanel" type="PanelContainer" parent="." unique_id=40517554]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 394.0
+offset_right = 1090.0
+offset_bottom = 607.0
+
+[node name="ChoiceHBox" type="HBoxContainer" parent="ChoicePanel" unique_id=710306150]
+layout_mode = 2
+
+[node name="CasualButton" type="Button" parent="ChoicePanel/ChoiceHBox" unique_id=2049233778]
+layout_mode = 2
+text = "Casual Self"
+
+[node name="PoliteButton" type="Button" parent="ChoicePanel/ChoiceHBox" unique_id=546225059]
+layout_mode = 2
+text = "Polite Face"
+
+[node name="FormalButton" type="Button" parent="ChoicePanel/ChoiceHBox" unique_id=462655392]
+layout_mode = 2
+text = "Formal Mask"
+
 [connection signal="pressed" from="DialoguePanel/MarginContainer/DialogueVBox/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="ChoicePanel/ChoiceHBox/CasualButton" to="." method="_on_casual_button_pressed"]
+[connection signal="pressed" from="ChoicePanel/ChoiceHBox/PoliteButton" to="." method="_on_polite_button_pressed"]
+[connection signal="pressed" from="ChoicePanel/ChoiceHBox/FormalButton" to="." method="_on_formal_button_pressed"]
