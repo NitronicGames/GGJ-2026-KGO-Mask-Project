@@ -69,6 +69,9 @@ func _on_next_button_pressed() -> void:
 
 	if scenario_index >= scenario_data.scenarios.size():
 		print("All scenarios done")
+		feedback_panel.visible = false
+		choice_panel.visible = false
+		dialogue_panel.visible = true
 		return
 
 	load_scenario(scenario_index)
