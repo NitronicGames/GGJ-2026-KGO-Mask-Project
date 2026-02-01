@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="NPC" format=3 uid="uid://6l0glgl37lkt"]
+
+[ext_resource type="Script" uid="uid://cp3m1wyh1uc08" path="res://components/resource_scripts/dialogue_reaction.gd" id="1_11i4k"]
+[ext_resource type="Script" uid="uid://cw2vkskfb6cji" path="res://components/resource_scripts/npc.gd" id="2_xcle6"]
+
+[resource]
+script = ExtResource("2_xcle6")
+name = "Classmate"
+scene_file = "uid://cdojvesy18t7x"
+metadata/_custom_type_script = "uid://cw2vkskfb6cji"

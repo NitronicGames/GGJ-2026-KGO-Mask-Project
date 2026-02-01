@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b8p1l10nh8mgo"]
+
+[ext_resource type="Script" uid="uid://d2cbrgxxo5d54" path="res://NPCs/base/npc.gd" id="2_vxakg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_315tm"]
+
+[node name="Npc" type="AnimatedSprite2D" unique_id=2037629339]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_315tm")
+script = ExtResource("2_vxakg")

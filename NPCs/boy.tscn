@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c02a8xrx5eih4"]
+
+[ext_resource type="PackedScene" uid="uid://b8p1l10nh8mgo" path="res://NPCs/base/npc.tscn" id="1_st77m"]
+[ext_resource type="SpriteFrames" uid="uid://buc1s3wol2iy5" path="res://NPCs/anim_frames/boy_sprite_frames.tres" id="2_ohxhn"]
+
+[node name="Npc" unique_id=2037629339 instance=ExtResource("1_st77m")]
+sprite_frames = ExtResource("2_ohxhn")
+animation = &"idle"
+frame_progress = 0.4270218
