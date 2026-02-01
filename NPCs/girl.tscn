@@ -5,4 +5,5 @@
 
 [node name="Npc" unique_id=2037629339 instance=ExtResource("1_m173m")]
 sprite_frames = ExtResource("2_o7my3")
-animation = &"default"
+animation = &"idle"
+frame_progress = 0.13039218
