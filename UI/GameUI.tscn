@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dxy5cjsbdhtdr"]
 
+[ext_resource type="Script" uid="uid://ry5d6nxdrmax" path="res://UI/game_ui.gd" id="1_ltpa0"]
+
 [node name="Control" type="Control" unique_id=672595178]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,35 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ltpa0")
+
+[node name="DialoguePanel" type="PanelContainer" parent="." unique_id=1605838643]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="DialoguePanel" unique_id=102938300]
+layout_mode = 2
+
+[node name="DialogueVBox" type="VBoxContainer" parent="DialoguePanel/MarginContainer" unique_id=1103371002]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SpeakerLabel" type="Label" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=1916082765]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Boss"
+
+[node name="LineLabel" type="RichTextLabel" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=189310005]
+layout_mode = 2
+text = "Dialogue goes here"
+scroll_active = false
+
+[node name="ContinueButton" type="Button" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=2083306898]
+layout_mode = 2
+text = "Continue"
+
+[connection signal="pressed" from="DialoguePanel/MarginContainer/DialogueVBox/ContinueButton" to="." method="_on_continue_button_pressed"]
