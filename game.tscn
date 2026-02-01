@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://csmgoxnyx2hio"]
 
-[ext_resource type="PackedScene" uid="uid://cdl2alxfgsvuc" path="res://game_state/game_state.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://ivgmm7lg0s5b" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://dxy5cjsbdhtdr" path="res://UI/GameUI.tscn" id="2_feb5d"]
 
 [node name="Game" type="Node2D" unique_id=2085143093]
 script = ExtResource("1_feb5d")
-
-[node name="GameState" parent="." unique_id=803203647 instance=ExtResource("1_e2o6t")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=889310207]
 
