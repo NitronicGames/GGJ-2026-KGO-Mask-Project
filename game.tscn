@@ -1,12 +1,20 @@
 [gd_scene format=3 uid="uid://csmgoxnyx2hio"]
 
 [ext_resource type="PackedScene" uid="uid://cdl2alxfgsvuc" path="res://game_state/game_state.tscn" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://ivgmm7lg0s5b" path="res://game.gd" id="1_feb5d"]
 [ext_resource type="PackedScene" uid="uid://dxy5cjsbdhtdr" path="res://UI/GameUI.tscn" id="2_feb5d"]
 
 [node name="Game" type="Node2D" unique_id=2085143093]
+script = ExtResource("1_feb5d")
 
 [node name="GameState" parent="." unique_id=803203647 instance=ExtResource("1_e2o6t")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=889310207]
 
 [node name="Control" parent="CanvasLayer" unique_id=672595178 instance=ExtResource("2_feb5d")]
+
+[node name="LeftNPCMark" type="Marker2D" parent="." unique_id=1407638413]
+position = Vector2(200, 384)
+
+[node name="RightNPCMark" type="Marker2D" parent="." unique_id=710556668]
+position = Vector2(1166, 384)
