@@ -120,15 +120,15 @@ theme_override_constants/shadow_offset_y = 9
 theme_override_font_sizes/font_size = 200
 text = "K, Go!"
 
+[node name="TextGgJinfo" type="Sprite2D" parent="VBoxContainer/Panel_Background" unique_id=781814191]
+position = Vector2(134.75, -172)
+texture = ExtResource("3_d8nwk")
+
 [node name="BgTitle" type="Sprite2D" parent="VBoxContainer/Panel_Background" unique_id=188279797]
 z_index = -1
 position = Vector2(140.75, -260)
 scale = Vector2(0.95, 0.95)
 texture = ExtResource("2_tk8dj")
-
-[node name="TextGgJinfo" type="Sprite2D" parent="VBoxContainer" unique_id=781814191]
-position = Vector2(134.75, 36)
-texture = ExtResource("3_d8nwk")
 
 [connection signal="pressed" from="VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]
