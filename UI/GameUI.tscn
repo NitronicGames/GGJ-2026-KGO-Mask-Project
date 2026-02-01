@@ -26,15 +26,14 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="SpeakerLabel" type="Label" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=1916082765]
+[node name="SpeakerLabel" type="Label" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=2094615594]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Boss"
 
-[node name="LineLabel" type="RichTextLabel" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=189310005]
+[node name="LineLabel" type="Label" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=1783595204]
 layout_mode = 2
 text = "Dialogue goes here"
-scroll_active = false
 
 [node name="ContinueButton" type="Button" parent="DialoguePanel/MarginContainer/DialogueVBox" unique_id=2083306898]
 layout_mode = 2
