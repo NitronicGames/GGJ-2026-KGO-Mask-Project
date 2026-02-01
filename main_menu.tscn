@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://uqvs8xnlu7iv"]
+
+[ext_resource type="FontFile" path="res://JAPAB___.TTF" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://cf8ehcagcyktg" path="res://UI/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" path="res://Old Japanese.otf" id="2_fu7sn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0.47788018, 0.47788018, 0.47788, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.7666196, 0.76661956, 0.76661944, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glbon"]
+
+[node name="MainMenu" type="Control" unique_id=777351677]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fu7sn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=799275437]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.605
+anchor_right = 0.5
+anchor_bottom = 0.605
+offset_left = -136.75
+offset_top = -110.04001
+offset_right = 136.75
+offset_bottom = 109.95999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -1
+
+[node name="Start_Button" type="Button" parent="VBoxContainer" unique_id=833645838]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_7vrkn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
+text = "Start Game"
+
+[node name="Options_Button" type="Button" parent="VBoxContainer" unique_id=733611597]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_7vrkn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
+text = "Options"
+
+[node name="Exit_Button" type="Button" parent="VBoxContainer" unique_id=10240375]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_7vrkn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fu7sn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jix8l")
+text = "Exit"
+
+[node name="Panel_Background" type="Panel" parent="VBoxContainer" unique_id=1865614629]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_glbon")
+
+[node name="Label" type="Label" parent="VBoxContainer/Panel_Background" unique_id=915156041]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -288.5
+offset_top = -476.0
+offset_right = 288.5
+offset_bottom = -267.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 200
+text = "K, Go!"
+
+[connection signal="pressed" from="VBoxContainer/Start_Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit_Button" to="." method="_on_exit_button_pressed"]
