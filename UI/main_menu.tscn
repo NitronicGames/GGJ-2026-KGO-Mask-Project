@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://j8bk56l4l5qj"]
 
-[ext_resource type="FontFile" uid="uid://bwvt5k72dvmk7" path="res://Fonts/JAPAB___.TTF" id="1_7vrkn"]
 [ext_resource type="Script" uid="uid://cf8ehcagcyktg" path="res://UI/main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://bt0ynmer4tv0j" path="res://Fonts/Old Japanese.otf" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)
@@ -63,7 +61,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_7vrkn")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
@@ -78,7 +75,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_7vrkn")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
@@ -93,7 +89,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_7vrkn")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_rhts7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_7vrkn")
@@ -119,7 +114,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 9
-theme_override_fonts/font = ExtResource("2_fu7sn")
 theme_override_font_sizes/font_size = 200
 text = "K, Go!"
 

@@ -11,11 +11,17 @@ func _ready() -> void:
 	var s = scenario_data.get_scenario(0)
 	$DialoguePanel/MarginContainer/DialogueVBox/SpeakerLabel.text = s["speaker"]
 	$DialoguePanel/MarginContainer/DialogueVBox/LineLabel.text = s["line"]
+	feedback_panel.visible = false
+	choice_panel.visible = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func show_reaction(mask: String) -> void:
+	var s = scenario_data.get_scenario(0)
+	var r = s["reactions"][mask]
+
+	$FeedbackPanel/MarginContainer/FeedbackVBox/ReactionLabel.text = r["text"]
+	$FeedbackPanel/MarginContainer/FeedbackVBox/ReflectionLabel.text = r["why"]
 
 
 func _on_continue_button_pressed() -> void:
@@ -27,18 +33,21 @@ func _on_continue_button_pressed() -> void:
 
 func _on_casual_button_pressed() -> void:
 	print("Mask: casual")
+	show_reaction("casual")
 	choice_panel.visible = false
 	feedback_panel.visible = true
 
 
 func _on_polite_button_pressed() -> void:
 	print("Mask: polite")
+	show_reaction("polite")
 	choice_panel.visible = false
 	feedback_panel.visible = true
 
 
 func _on_formal_button_pressed() -> void:
 	print("Mask: formal")
+	show_reaction("formal")
 	choice_panel.visible = false
 	feedback_panel.visible = true
 
