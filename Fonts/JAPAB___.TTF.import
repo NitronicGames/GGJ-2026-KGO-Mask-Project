@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bt0ynmer4tv0j"
-path="res://.godot/imported/Old Japanese.otf-d4f1c59e60a00e199839e16a5f3cf369.fontdata"
+uid="uid://bwvt5k72dvmk7"
+path="res://.godot/imported/JAPAB___.TTF-7d3e329ffdb3d34bc9402e09a0bffe75.fontdata"
 
 [deps]
 
-source_file="res://Old Japanese.otf"
-dest_files=["res://.godot/imported/Old Japanese.otf-d4f1c59e60a00e199839e16a5f3cf369.fontdata"]
+source_file="res://Fonts/JAPAB___.TTF"
+dest_files=["res://.godot/imported/JAPAB___.TTF-7d3e329ffdb3d34bc9402e09a0bffe75.fontdata"]
 
 [params]
 
