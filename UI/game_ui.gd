@@ -25,3 +25,7 @@ func _on_polite_button_pressed() -> void:
 
 func _on_formal_button_pressed() -> void:
 	print("Mask: formal")
+
+
+func _on_next_button_pressed() -> void:
+	pass # Replace with function body.
