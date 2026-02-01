@@ -1,6 +1,7 @@
 extends Node
 
 var scenarios = [
+
 	{
 		"id": 1,
 		"speaker": "Boss",

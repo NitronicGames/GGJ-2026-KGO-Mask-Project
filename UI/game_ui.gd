@@ -4,16 +4,28 @@ extends Control
 @onready var choice_panel: Control = $ChoicePanel
 @onready var feedback_panel: Control = $FeedbackPanel
 
+
+
 var ScenarioData = preload("res://game_state/scenario_data.gd")
 var scenario_data = ScenarioData.new()
+var scenario_index := 0
+
+
 
 func _ready() -> void:
-	var s = scenario_data.get_scenario(0)
+	load_scenario(scenario_index)
+
+
+func load_scenario(i: int) -> void:
+	var s = scenario_data.get_scenario(i)
+
 	$DialoguePanel/MarginContainer/DialogueVBox/SpeakerLabel.text = s["speaker"]
 	$DialoguePanel/MarginContainer/DialogueVBox/LineLabel.text = s["line"]
-	feedback_panel.visible = false
-	choice_panel.visible = false
 
+	# reset visible panels
+	dialogue_panel.visible = true
+	choice_panel.visible = false
+	feedback_panel.visible = false
 
 
 func show_reaction(mask: String) -> void:
@@ -53,7 +65,10 @@ func _on_formal_button_pressed() -> void:
 
 
 func _on_next_button_pressed() -> void:
-	print("Next clicked")
-	dialogue_panel.visible = true
-	choice_panel.visible = false
-	feedback_panel.visible = false
+	scenario_index += 1
+
+	if scenario_index >= scenario_data.scenarios.size():
+		print("All scenarios done")
+		return
+
+	load_scenario(scenario_index)
