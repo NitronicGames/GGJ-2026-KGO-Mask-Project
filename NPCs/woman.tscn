@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://l4a8uc4gp4du"]
+
+[ext_resource type="PackedScene" uid="uid://b8p1l10nh8mgo" path="res://NPCs/base/npc.tscn" id="1_wdqeq"]
+[ext_resource type="SpriteFrames" uid="uid://evpagc0g8hql" path="res://NPCs/anim_frames/woman_sprite_frames.tres" id="2_hg1tu"]
+
+[node name="Npc" unique_id=2037629339 instance=ExtResource("1_wdqeq")]
+sprite_frames = ExtResource("2_hg1tu")
+animation = &"default"

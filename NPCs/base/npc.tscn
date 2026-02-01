@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b8p1l10nh8mgo"]
+
+[ext_resource type="Script" uid="uid://d2cbrgxxo5d54" path="res://NPCs/base/npc.gd" id="2_vxakg"]
+
+[node name="Npc" type="AnimatedSprite2D" unique_id=2037629339]
+animation = &"idle"
+script = ExtResource("2_vxakg")

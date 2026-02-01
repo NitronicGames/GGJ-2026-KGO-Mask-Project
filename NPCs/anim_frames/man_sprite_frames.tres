@@ -1,0 +1,26 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://no1x3bngt4ll"]
+
+[ext_resource type="Texture2D" uid="uid://cy8j8ty8vr88" path="res://assets/sprites/KGO_chara_man_s0_f0.png" id="1_qn08c"]
+[ext_resource type="Texture2D" uid="uid://bcvb5ylts64ip" path="res://assets/sprites/KGO_chara_man_s0_f1.png" id="2_5w0b7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qn08c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qn08c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5w0b7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
