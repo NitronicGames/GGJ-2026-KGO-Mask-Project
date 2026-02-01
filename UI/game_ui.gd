@@ -14,6 +14,8 @@ var scenario_data = ScenarioData.new()
 
 
 func _ready() -> void:
+	AudioManager.play_gameplay()
+	
 	feedback_panel.visible = false
 	choice_panel.visible = false
 	scenario_index = 0
