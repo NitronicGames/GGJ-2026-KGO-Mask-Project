@@ -4,6 +4,7 @@ var scenarios = [
 	{
 		"id": 1,
 		"speaker": "Boss",
+		"left_npc": "res://game_data/npcs/woman.tres",
 		"right_npc": "res://game_data/npcs/man.tres",
 		"line": "Please read this report today.",
 		"reactions": {
@@ -16,6 +17,7 @@ var scenarios = [
 	{
 		"id": 2,
 		"speaker": "Friend",
+		"left_npc": "res://game_data/npcs/boy.tres",
 		"right_npc": "res://game_data/npcs/girl.tres",
 		"line": "Hey—can you check this for me?",
 		"reactions": {
@@ -28,6 +30,7 @@ var scenarios = [
 	{
 		"id": 3,
 		"speaker": "Teacher",
+		"left_npc": "res://game_data/npcs/boy.tres",
 		"right_npc": "res://game_data/npcs/woman.tres",
 		"line": "Can you hand in your homework today?",
 		"reactions": {
@@ -40,6 +43,7 @@ var scenarios = [
 	{
 		"id": 4,
 		"speaker": "Classmate",
+		"left_npc": "res://game_data/npcs/girl.tres",
 		"right_npc": "res://game_data/npcs/boy.tres",
 		"line": "Can you send me your notes later?",
 		"reactions": {
