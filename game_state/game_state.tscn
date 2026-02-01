@@ -1,33 +1,19 @@
 [gd_scene format=3 uid="uid://06km6iisermd"]
 
-[ext_resource type="Script" path="res://game_state/game_state.gd" id="1_05esu"]
-[ext_resource type="Script" path="res://game_state/init.gd" id="2_05esu"]
-[ext_resource type="Script" path="res://game_state/loading_scenario.gd" id="3_trw2i"]
-[ext_resource type="Script" path="res://game_state/running_dialogue.gd" id="4_i6q3u"]
-[ext_resource type="Script" path="res://game_state/player_choosing.gd" id="5_2afif"]
-[ext_resource type="Script" path="res://game_state/running_reaction.gd" id="6_g2oga"]
-
-[node name="GameState" type="Node" unique_id=803203647 node_paths=PackedStringArray("initial_state")]
-script = ExtResource("1_05esu")
-initial_state = NodePath("Init")
+[node name="GameState" type="Node" unique_id=803203647]
 metadata/_custom_type_script = "uid://djeuwcpgvarng"
 
 [node name="Init" type="Node" parent="." unique_id=2068915136]
-script = ExtResource("2_05esu")
 metadata/_custom_type_script = "uid://mexu1dikjy2v"
 
 [node name="LoadingScenario" type="Node" parent="." unique_id=2120813095]
-script = ExtResource("3_trw2i")
 metadata/_custom_type_script = "uid://mexu1dikjy2v"
 
 [node name="RunningDialogue" type="Node" parent="." unique_id=1089290606]
-script = ExtResource("4_i6q3u")
 metadata/_custom_type_script = "uid://mexu1dikjy2v"
 
 [node name="PlayerChoosing" type="Node" parent="." unique_id=446249468]
-script = ExtResource("5_2afif")
 metadata/_custom_type_script = "uid://mexu1dikjy2v"
 
 [node name="RunningReaction" type="Node" parent="." unique_id=1682616871]
-script = ExtResource("6_g2oga")
 metadata/_custom_type_script = "uid://mexu1dikjy2v"

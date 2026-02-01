@@ -35,6 +35,18 @@ var scenarios = [
 			"polite": {"text": "Good.", "why": "Polite speech fits a teacher-student context well."},
 			"formal": {"text": "Respectful, maybe overdoing it.", "why": "Formal can work, but might feel overly distant."}
 		}
+	},
+
+	{
+		"id": 4,
+		"speaker": "Classmate",
+		"right_npc": "res://game_data/npcs/boy.tres",
+		"line": "Can you send me your notes later?",
+		"reactions": {
+			"casual": {"text": "Friendly and natural.", "why": "Casual tone fits classmates well."},
+			"polite": {"text": "Still good.", "why": "Polite works, but adds a bit of distance."},
+			"formal": {"text": "Too formal.", "why": "Formal speech feels stiff between classmates."}
+		}
 	}
 ]
 
