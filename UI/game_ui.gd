@@ -71,6 +71,7 @@ func _on_next_button_pressed() -> void:
 	print("Next clicked")
 	scenario_index += 1
 
+
 	if scenario_index >= scenario_data.scenarios.size():
 		print("All scenarios done")
 		feedback_panel.visible = false
