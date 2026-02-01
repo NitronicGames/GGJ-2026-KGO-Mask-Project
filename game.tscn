@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b2uqaqfd0km5p" path="res://assets/text/text_K2.png" id="5_vef74"]
 [ext_resource type="Texture2D" uid="uid://d25asrxhhx8un" path="res://assets/text/text_K3.png" id="6_hve3p"]
 [ext_resource type="Texture2D" uid="uid://clwfraafa6m8b" path="res://assets/text/text_Go.png" id="7_mfdv2"]
+[ext_resource type="Texture2D" uid="uid://c7p3b6pa1cmtf" path="res://assets/splash/bg_Blank2.png" id="8_j5wjh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_iotsf"]
 animations = [{
@@ -48,3 +49,8 @@ position = Vector2(1166, 384)
 sprite_frames = SubResource("SpriteFrames_iotsf")
 frame = 4
 frame_progress = 1.0
+
+[node name="BgBlank2" type="Sprite2D" parent="." unique_id=2067438008]
+z_index = -1
+position = Vector2(674, 391)
+texture = ExtResource("8_j5wjh")
