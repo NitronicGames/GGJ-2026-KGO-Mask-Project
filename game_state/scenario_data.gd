@@ -4,6 +4,7 @@ var scenarios = [
 	{
 		"id": 1,
 		"speaker": "Boss",
+		"right_npc": "res://game_data/npcs/man.tres",
 		"line": "Please read this report today.",
 		"reactions": {
 			"casual": {"text": "That sounded too casual.", "why": "Your boss expects a more formal tone."},
@@ -15,6 +16,7 @@ var scenarios = [
 	{
 		"id": 2,
 		"speaker": "Friend",
+		"right_npc": "res://game_data/npcs/girl.tres",
 		"line": "Hey—can you check this for me?",
 		"reactions": {
 			"casual": {"text": "Natural and friendly.", "why": "With close friends, casual feels warm and normal."},
@@ -26,6 +28,7 @@ var scenarios = [
 	{
 		"id": 3,
 		"speaker": "Teacher",
+		"right_npc": "res://game_data/npcs/woman.tres",
 		"line": "Can you hand in your homework today?",
 		"reactions": {
 			"casual": {"text": "Too relaxed.", "why": "A teacher expects respectful language."},

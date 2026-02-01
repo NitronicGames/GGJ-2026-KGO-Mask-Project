@@ -32,6 +32,7 @@ func load_scenario(i: int) -> void:
 
 	speaker_label.text = current_scenario["speaker"]
 	line_label.text = current_scenario["line"]
+	add_npcs(current_scenario)
 	
 	# reset panels for a fresh scenario
 	dialogue_panel.visible = true
@@ -43,6 +44,14 @@ func show_reaction(mask: String) -> void:
 	var r = current_scenario["reactions"][mask]
 	$FeedbackPanel/MarginContainer/FeedbackVBox/ReactionLabel.text = r["text"]
 	$FeedbackPanel/MarginContainer/FeedbackVBox/ReflectionLabel.text = r["why"]
+
+
+func add_npcs(scenario: Dictionary) -> void:
+	var game: Node2D = get_tree().current_scene
+	if "right_npc" in current_scenario and game.has_method("add_right_npc"):
+		game.add_right_npc.call_deferred(load(scenario["right_npc"]))
+	if "left_npc" in current_scenario and game.has_method("add_left_npc"):
+		game.add_left_npc.call_deferred(load(scenario["left_npc"]))
 
 
 func _on_continue_button_pressed() -> void:
