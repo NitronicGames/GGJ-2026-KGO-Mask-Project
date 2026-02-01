@@ -1,6 +1,6 @@
 extends State
 
 
-func _process(delta: float) -> void:
-	if get_tree().current_scene.ready:
-		manager.change_state_to("LoadingScenario")
+func _enter_state() -> void:
+	await get_tree().process_frame
+	manager.change_state_to("LoadingScenario")

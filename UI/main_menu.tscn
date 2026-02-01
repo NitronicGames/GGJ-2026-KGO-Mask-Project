@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://uqvs8xnlu7iv"]
+[gd_scene format=3 uid="uid://j8bk56l4l5qj"]
 
-[ext_resource type="FontFile" uid="uid://bwvt5k72dvmk7" path="res://JAPAB___.TTF" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://cf8ehcagcyktg" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://bt0ynmer4tv0j" path="res://Old Japanese.otf" id="2_fu7sn"]
+[ext_resource type="FontFile" uid="uid://bwvt5k72dvmk7" path="res://Fonts/JAPAB___.TTF" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://cf8ehcagcyktg" path="res://UI/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://bt0ynmer4tv0j" path="res://Fonts/Old Japanese.otf" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhts7"]
 bg_color = Color(1, 1, 1, 1)

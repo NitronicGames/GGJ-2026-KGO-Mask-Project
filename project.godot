@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="GGJ-2026 \"K,Go!\" Project"
-run/main_scene="uid://dpmkc3ojjnjcw"
+run/main_scene="uid://j8bk56l4l5qj"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
 
 [physics]
 
