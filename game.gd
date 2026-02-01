@@ -1,3 +1,4 @@
+class_name Game
 extends Node2D
 
 var left_npc: AnimatedSprite2D
@@ -39,6 +40,27 @@ func remove_left_npc() -> void:
 func remove_right_npc() -> void:
 	right_npc.queue_free()
 	right_npc = null
+
+
+func left_npc_speaking() -> void:
+	if is_instance_valid(left_npc):
+		left_npc.play("idle")
+	if is_instance_valid(right_npc):
+		right_npc.play("default")
+
+
+func right_npc_speaking() -> void:
+	if is_instance_valid(left_npc):
+		left_npc.play("default")
+	if is_instance_valid(right_npc):
+		right_npc.play("idle")
+
+
+func no_npc_speaking() -> void:
+	if is_instance_valid(left_npc):
+		left_npc.play("default")
+	if is_instance_valid(right_npc):
+		right_npc.play("default")
 
 
 func instantiate_npc(_npc: NPC) -> Node2D:
