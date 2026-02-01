@@ -11,6 +11,14 @@ var scenario_index: int = 0
 var current_scenario: Dictionary = {}
 var ScenarioData = preload("res://game_state/scenario_data.gd")
 var scenario_data = ScenarioData.new()
+var game: Game:
+	get():
+		if not is_instance_valid(game):
+			var _game = get_tree().current_scene
+			print(_game)
+			if _game is Game:
+				game = _game
+		return game
 
 
 func _ready() -> void:
@@ -48,12 +56,10 @@ func show_reaction(mask: String) -> void:
 
 
 func add_npcs(scenario: Dictionary) -> void:
-	var game: Node2D = get_tree().current_scene
-
-	if scenario.has("right_npc") and game.has_method("add_right_npc"):
+	if scenario.has("right_npc") and game:
 		game.call_deferred("add_right_npc", load(scenario["right_npc"]))
-
-	if scenario.has("left_npc") and game.has_method("add_left_npc"):
+		game.right_npc_speaking.call_deferred()
+	if scenario.has("left_npc") and game:
 		game.call_deferred("add_left_npc", load(scenario["left_npc"]))
 
 
@@ -62,11 +68,17 @@ func _on_continue_button_pressed() -> void:
 	choice_panel.visible = true
 	feedback_panel.visible = false
 
+	if game:
+		game.left_npc_speaking()
+
 
 func _on_casual_button_pressed() -> void:
 	show_reaction("casual")
 	choice_panel.visible = false
 	feedback_panel.visible = true
+
+	if game:
+		game.no_npc_speaking()
 
 
 func _on_polite_button_pressed() -> void:
@@ -74,11 +86,17 @@ func _on_polite_button_pressed() -> void:
 	choice_panel.visible = false
 	feedback_panel.visible = true
 
+	if game:
+		game.no_npc_speaking()
+
 
 func _on_formal_button_pressed() -> void:
 	show_reaction("formal")
 	choice_panel.visible = false
 	feedback_panel.visible = true
+
+	if game:
+		game.no_npc_speaking()
 
 
 func _on_next_button_pressed() -> void:
