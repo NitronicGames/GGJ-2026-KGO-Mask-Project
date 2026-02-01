@@ -27,18 +27,25 @@ func _ready() -> void:
 	feedback_panel.visible = false
 	choice_panel.visible = false
 	scenario_index = 0
-	load_scenario(scenario_index)
+	load_scenario.call_deferred(scenario_index)
 
 
 func load_scenario(i: int) -> void:
+	dialogue_panel.visible = false
+	choice_panel.visible = false
+	feedback_panel.visible = false
+	if game:
+		game.remove_left_npc()
+		game.remove_right_npc()
+
 	if i >= scenario_data.scenarios.size():
 		print("All scenarios done")
-		dialogue_panel.visible = false
-		choice_panel.visible = false
-		feedback_panel.visible = false
 		return
 
 	current_scenario = scenario_data.get_scenario(i)
+	if game:
+		await game.show_k_go()
+
 	add_npcs(current_scenario)
 
 	speaker_label.text = current_scenario["speaker"]

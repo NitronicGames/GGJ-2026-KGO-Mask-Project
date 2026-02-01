@@ -6,13 +6,20 @@ var right_npc: AnimatedSprite2D
 
 @onready var left_npc_mark: Marker2D = $LeftNPCMark
 @onready var right_npc_mark: Marker2D = $RightNPCMark
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready() -> void:
-	pass
-	# for example
-	#add_left_npc(load("res://game_data/npcs/boy.tres"))
-	#add_right_npc(load("res://game_data/npcs/girl.tres"))
+	var vp_rect: Rect2i = get_viewport_rect()
+	animated_sprite_2d.hide()
+	animated_sprite_2d.position = vp_rect.get_center()
+	animated_sprite_2d.animation_finished.connect(animated_sprite_2d.hide)
+
+
+func show_k_go() -> Signal:
+	animated_sprite_2d.play("default")
+	animated_sprite_2d.show()
+	return animated_sprite_2d.animation_finished
 
 
 func add_left_npc(npc: NPC) -> void:
@@ -33,12 +40,14 @@ func add_right_npc(npc: NPC) -> void:
 
 
 func remove_left_npc() -> void:
-	left_npc.queue_free()
+	if is_instance_valid(left_npc):
+		left_npc.queue_free()
 	left_npc = null
 
 
 func remove_right_npc() -> void:
-	right_npc.queue_free()
+	if is_instance_valid(right_npc):
+		right_npc.queue_free()
 	right_npc = null
 
 
