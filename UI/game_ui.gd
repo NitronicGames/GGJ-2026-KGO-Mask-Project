@@ -25,18 +25,17 @@ func _ready() -> void:
 func load_scenario(i: int) -> void:
 	if i >= scenario_data.scenarios.size():
 		print("All scenarios done")
-		feedback_panel.visible = false
-		choice_panel.visible = false
 		dialogue_panel.visible = false
+		choice_panel.visible = false
+		feedback_panel.visible = false
 		return
 
 	current_scenario = scenario_data.get_scenario(i)
+	add_npcs(current_scenario)
 
 	speaker_label.text = current_scenario["speaker"]
 	line_label.text = current_scenario["line"]
-	add_npcs(current_scenario)
-	
-	# reset panels for a fresh scenario
+
 	dialogue_panel.visible = true
 	choice_panel.visible = false
 	feedback_panel.visible = false
@@ -50,10 +49,12 @@ func show_reaction(mask: String) -> void:
 
 func add_npcs(scenario: Dictionary) -> void:
 	var game: Node2D = get_tree().current_scene
-	if "right_npc" in current_scenario and game.has_method("add_right_npc"):
-		game.add_right_npc.call_deferred(load(scenario["right_npc"]))
-	if "left_npc" in current_scenario and game.has_method("add_left_npc"):
-		game.add_left_npc.call_deferred(load(scenario["left_npc"]))
+
+	if scenario.has("right_npc") and game.has_method("add_right_npc"):
+		game.call_deferred("add_right_npc", load(scenario["right_npc"]))
+
+	if scenario.has("left_npc") and game.has_method("add_left_npc"):
+		game.call_deferred("add_left_npc", load(scenario["left_npc"]))
 
 
 func _on_continue_button_pressed() -> void:
@@ -82,14 +83,4 @@ func _on_formal_button_pressed() -> void:
 
 func _on_next_button_pressed() -> void:
 	scenario_index += 1
-	load_scenario(scenario_index)
-
-
-	if scenario_index >= scenario_data.scenarios.size():
-		print("All scenarios done")
-		feedback_panel.visible = false
-		choice_panel.visible = false
-		dialogue_panel.visible = false
-		return
-
 	load_scenario(scenario_index)
