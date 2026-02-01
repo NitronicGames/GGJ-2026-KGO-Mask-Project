@@ -5,33 +5,36 @@ extends Control
 @onready var feedback_panel: Control = $FeedbackPanel
 
 
-
 var ScenarioData = preload("res://game_state/scenario_data.gd")
 var scenario_data = ScenarioData.new()
 var scenario_index := 0
-
+var current_s := {}
 
 
 func _ready() -> void:
+	scenario_index = 0
 	load_scenario(scenario_index)
+	feedback_panel.visible = false
+	choice_panel.visible = false
+	dialogue_panel.visible = true
 
 
 func load_scenario(i: int) -> void:
-	var s = scenario_data.get_scenario(i)
+	if i >= scenario_data.scenarios.size():
+		print("All scenarios done")
+		feedback_panel.visible = false
+		choice_panel.visible = false
+		dialogue_panel.visible = false
+		return
 
-	$DialoguePanel/MarginContainer/DialogueVBox/SpeakerLabel.text = s["speaker"]
-	$DialoguePanel/MarginContainer/DialogueVBox/LineLabel.text = s["line"]
+	current_s = scenario_data.get_scenario(i)
 
-	# reset visible panels
-	dialogue_panel.visible = true
-	choice_panel.visible = false
-	feedback_panel.visible = false
+	$DialoguePanel/MarginContainer/DialogueVBox/SpeakerLabel.text = current_s["speaker"]
+	$DialoguePanel/MarginContainer/DialogueVBox/LineLabel.text = current_s["line"]
 
 
 func show_reaction(mask: String) -> void:
-	var s = scenario_data.get_scenario(0)
-	var r = s["reactions"][mask]
-
+	var r = current_s["reactions"][mask]
 	$FeedbackPanel/MarginContainer/FeedbackVBox/ReactionLabel.text = r["text"]
 	$FeedbackPanel/MarginContainer/FeedbackVBox/ReflectionLabel.text = r["why"]
 
@@ -65,13 +68,14 @@ func _on_formal_button_pressed() -> void:
 
 
 func _on_next_button_pressed() -> void:
+	print("Next clicked")
 	scenario_index += 1
 
 	if scenario_index >= scenario_data.scenarios.size():
 		print("All scenarios done")
 		feedback_panel.visible = false
 		choice_panel.visible = false
-		dialogue_panel.visible = true
+		dialogue_panel.visible = false
 		return
 
 	load_scenario(scenario_index)
